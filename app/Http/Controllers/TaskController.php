@@ -15,7 +15,7 @@ class TaskController extends Controller
     public function indexFunction(){
         return view('task.index');
     }
-
+    
     //Retorna a view create
     public function createTask(){
         return view('task.create');

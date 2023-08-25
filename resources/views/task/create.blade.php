@@ -7,6 +7,15 @@
 </head>
 <body>
     <h1>Create Task</h1>
+    <div>
+        @if($errors->any()) <!--Se houver algum erro ele será mostrado em uma lista -->
+            @foreach ($errors->all() as $erro)
+                <ul>
+                    <li> {{$erro}} </li>
+                </ul>
+            @endforeach
+        @endif
+    </div>
     <form method="post" action="{{route('task.save')}}">
         @csrf <!-- Token de segurança -->
         @method('post')

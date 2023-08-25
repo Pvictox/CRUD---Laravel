@@ -6,8 +6,6 @@
     <title>Task CRUD</title>
 </head>
 <body>
-    <h1>VIEW INDEX</h1>
-
-    <button type="button" onclick="window.location = '{{route('task.create')}}' ">Create</button>
+    <h1>READ PAGE</h1>
 </body>
 </html>

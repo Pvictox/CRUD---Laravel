@@ -16,3 +16,6 @@ Route::get('/task/create', [TaskController::class, 'createTask'])->name('task.cr
 
 #Rota para salvar uma determinada Task no BD
 Route::post('task', [TaskController::class, 'saveTask'])->name('task.save');
+
+#Novo endpoint para listar as tarefas no BD
+Route::get('/task/show', [TaskController::class, 'showAll'])->name('task.read');
