@@ -16,7 +16,7 @@
             @endforeach
         @endif
     </div>
-    <form method="post" action="{{route('task.save')}}">
+    <form method="post" action="{{route('task.save')}}">  <!-- Método post visto que iremos capturar info. e a rota que irá atuar sobre essa captura (no caso o salvamento dos dados no DB)-->
         @csrf <!-- Token de segurança -->
         @method('post')
         <div>

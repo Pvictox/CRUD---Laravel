@@ -14,11 +14,11 @@
                 <th>Título</th>
                 <th>Descrição</th>
             </tr>
-            @foreach ($tasks as $task)
+            @foreach ($tasks as $singleTask) <!-- -A variável $tasks (plural) é provida pelo controlador TaskController. Basicamente essa variável contém todos os registros do banco de dados.->
                 <tr>
-                    <td>{{$task->id}}</td>
-                    <td>{{$task->titulo}}</td>
-                    <td>{{$task->desc}}</td>
+                    <td>{{$singleTask->id}}</td>
+                    <td>{{$singleTask->titulo}}</td>
+                    <td>{{$singleTask->desc}}</td>
                 </tr>
             @endforeach
         </table>
