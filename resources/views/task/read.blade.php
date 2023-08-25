@@ -14,7 +14,7 @@
                 <th>Título</th>
                 <th>Descrição</th>
             </tr>
-            @foreach ($tasks as $singleTask) <!-- -A variável $tasks (plural) é provida pelo controlador TaskController. Basicamente essa variável contém todos os registros do banco de dados.->
+            @foreach ($tasks as $singleTask) <!-- -A variável $tasks (plural) é provida pelo controlador TaskController. Basicamente essa variável contém todos os registros do banco de dados.-->
                 <tr>
                     <td>{{$singleTask->id}}</td>
                     <td>{{$singleTask->titulo}}</td>
