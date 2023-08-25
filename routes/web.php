@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\TaskController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+#Criando rota para o point '/task' e nomeando para 'task.index' para implementações. 
+Route::get('/task', [TaskController::class, 'indexFunction'])->name('task.index');
