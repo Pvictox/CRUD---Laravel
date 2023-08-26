@@ -46,10 +46,11 @@ class TaskController extends Controller
         $validateData = $request->validate(  
             [
                 'titulo' => 'required',
-                'desc' => 'required'
+                'desc' => 'required',
             ]
         );
         
+    
         $rowsAffected = DB::table('task')
               ->where('id', $idTask)
               ->update($validateData);

@@ -34,7 +34,8 @@
         @else
             <h1>Sem nada no banco</h1>
         @endif
-
+        
+        <button type="button" onclick="window.location = '{{route('task.index')}}' ">Voltar</button>
     </div>
 </body>
 </html>

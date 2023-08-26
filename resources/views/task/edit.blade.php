@@ -29,5 +29,7 @@
         </div>
         <input type="submit" value="Atualizar o produto"/>
     </form>
+
+    <button type="button" onclick="window.location = '{{route('task.read')}}' ">Voltar</button>
 </body>
 </html>
