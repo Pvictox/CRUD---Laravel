@@ -20,6 +20,7 @@
                         <td>{{$singleTask->id}}</td>
                         <td>{{$singleTask->titulo}}</td>
                         <td>{{$singleTask->desc}}</td>
+                        <td><a href="{{route('task.edit', ['tarefa' => $singleTask->id])}}">Editar</a></td>
                     </tr>
                 @endforeach
             </table>

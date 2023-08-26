@@ -28,6 +28,35 @@ class TaskController extends Controller
     
     }
 
+    public function editTask($idtask){
+       $taskToEdit = $this->getTaskById($idtask);
+       return view('task.edit', ['taskToEdit' => $taskToEdit]);
+    }
+
+    public function getTaskById($id){
+        $resultTask = DB::select('select * from task where id = ?', [$id]);
+        if (sizeof($resultTask) > 0){
+            return $resultTask[0];
+        }else{
+            return 0;
+        }
+    }
+
+    public function updateTask($idTask, Request $request){
+        $validateData = $request->validate(  
+            [
+                'titulo' => 'required',
+                'desc' => 'required'
+            ]
+        );
+        
+        $rowsAffected = DB::table('task')
+              ->where('id', $idTask)
+              ->update($validateData);
+
+        return redirect()->route('task.index')->with('sucess', 'Produto atualizado');
+    }
+
     public function saveTask(Request $request){
         #Setamos o conjunto de atributos que são necessários.
         $validateData = $request->validate(  

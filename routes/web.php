@@ -19,3 +19,7 @@ Route::post('task', [TaskController::class, 'saveTask'])->name('task.save');
 
 #Novo endpoint para listar as tarefas no BD
 Route::get('/task/show', [TaskController::class, 'showAll'])->name('task.read');
+
+Route::get('/task/{tarefa}/edit', [TaskController::class, 'editTask'])->name('task.edit');
+
+Route::put('/task/{tarefa}/update', [TaskController::class, 'updateTask'])->name('task.update');
