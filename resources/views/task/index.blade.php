@@ -24,7 +24,7 @@
         <div>
             @if($errors->any()) <!--Se houver algum erro ele será mostrado em uma lista --> 
                 <hr class="border border-danger border-2 opacity-50">
-                    <p>Erro ao cadastrar Task</p>
+                    <p id="msg-erro">Erro ao cadastrar Task</p>
                     @foreach ($errors->all() as $erro)
                         <ul>
                             <li class="list-group-item list-group-item-danger"><p>{{$erro}}</p></li>

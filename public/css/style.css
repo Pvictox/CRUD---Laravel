@@ -19,10 +19,28 @@ body h1{
     padding: 2rem;
 }
 
-#msg-success{
+#formEdit{
+    margin-bottom: 2rem;
+}
+
+#editLabel{
+    color: white;
+}
+
+#msg-success, #msg-erro{
     color: white;
 }
 
 #exampleModalLabel{
     color: black;
+}
+
+#table-op{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#table-op a{
+    margin-right: 1rem;
 }

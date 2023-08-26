@@ -50,7 +50,7 @@ class TaskController extends Controller
               ->where('id', $idTask)
               ->update($validateData);
 
-        return redirect()->route('task.read')->with('sucess', 'Produto atualizado');
+        return redirect()->route('task.read')->with('success', 'Produto atualizado');
     }
 
     public function saveTask(Request $request){
