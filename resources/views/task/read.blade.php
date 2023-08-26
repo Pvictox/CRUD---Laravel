@@ -16,6 +16,11 @@
             <p id="msg-success">{{session('success')}}</p>
             <hr class="border border-primary border-3 opacity-75">
         @endif
+        @if (session()->has('erro'))
+                <hr class="border border-danger border-3 opacity-75">
+                <p id="msg-success">{{session('erro')}}</p>
+                <hr class="border border-danger border-3 opacity-75">
+        @endif
     </div>
     <div class="card-body">
         @if (sizeof($tasks) > 0) <!-- Tem registros no banco -->

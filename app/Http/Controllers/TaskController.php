@@ -25,7 +25,11 @@ class TaskController extends Controller
 
     public function editTask($idtask){
        $taskToEdit = $this->getTaskById($idtask);
-       return view('task.edit', ['taskToEdit' => $taskToEdit]);
+       if ($taskToEdit){
+        return view('task.edit', ['taskToEdit' => $taskToEdit]);
+       }else{
+        return $this->showAll()->with('erro', 'Task não encontrada');
+       }
     }
 
     public function getTaskById($id){
