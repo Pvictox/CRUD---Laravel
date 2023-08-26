@@ -23,3 +23,5 @@ Route::get('/task/show', [TaskController::class, 'showAll'])->name('task.read');
 Route::get('/task/{tarefa}/edit', [TaskController::class, 'editTask'])->name('task.edit');
 
 Route::put('/task/{tarefa}/update', [TaskController::class, 'updateTask'])->name('task.update');
+
+Route::delete('/task/{tarefa}/delete', [TaskController::class, 'deleteTask'])->name('task.delete');

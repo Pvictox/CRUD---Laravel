@@ -21,6 +21,13 @@
                         <td>{{$singleTask->titulo}}</td>
                         <td>{{$singleTask->desc}}</td>
                         <td><a href="{{route('task.edit', ['tarefa' => $singleTask->id])}}">Editar</a></td>
+                        <td>
+                            <form method="post" action="{{route('task.delete', ['tarefa' => $singleTask->id])}}">
+                                @csrf
+                                @method('delete')
+                                <input type="submit" value="Deletar">
+                            </form>
+                        </td>
                     </tr>
                 @endforeach
             </table>

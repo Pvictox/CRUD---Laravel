@@ -54,7 +54,7 @@ class TaskController extends Controller
               ->where('id', $idTask)
               ->update($validateData);
 
-        return redirect()->route('task.index')->with('sucess', 'Produto atualizado');
+        return redirect()->route('task.read')->with('sucess', 'Produto atualizado');
     }
 
     public function saveTask(Request $request){
@@ -75,5 +75,10 @@ class TaskController extends Controller
             )
             );
         return redirect()->route('task.index'); //Redireciona para a index (OBS: Se houvesse um controlador responsável pela index e.g: autenticação, o método seria disparado)
+    }
+
+    public function deleteTask($idTask){
+        $deleted = DB::table('task')->where('id', '=', $idTask)->delete();
+        return redirect()->route('task.read')->with('sucess', 'Deletado');
     }
 }
