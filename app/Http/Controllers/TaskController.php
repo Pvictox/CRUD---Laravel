@@ -46,7 +46,7 @@ class TaskController extends Controller
         $validateData = $request->validate(  
             [
                 'titulo' => 'required',
-                'desc' => 'required',
+                'desc' => 'required'
             ]
         );
         
@@ -75,11 +75,11 @@ class TaskController extends Controller
                 'created_at' => Carbon::now(),  //Obtém o tempo de criação do registro
             )
             );
-        return redirect()->route('task.index'); //Redireciona para a index (OBS: Se houvesse um controlador responsável pela index e.g: autenticação, o método seria disparado)
+        return redirect()->route('task.index')->with('success', 'Task cadastrada no banco de dados'); //Redireciona para a index (OBS: Se houvesse um controlador responsável pela index e.g: autenticação, o método seria disparado)
     }
 
     public function deleteTask($idTask){
         $deleted = DB::table('task')->where('id', '=', $idTask)->delete();
-        return redirect()->route('task.read')->with('sucess', 'Deletado');
+        return redirect()->route('task.read')->with('success', 'Deletado');
     }
 }

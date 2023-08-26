@@ -25,6 +25,6 @@ Route::get('/task/{tarefa}/edit', [TaskController::class, 'editTask'])->name('ta
 Route::put('/task/{tarefa}/update', [TaskController::class, 'updateTask'])->name('task.update');
 
 Route::delete('/task/{tarefa}/delete', [TaskController::class, 'deleteTask'])->name('task.delete');
-Auth::routes();
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
