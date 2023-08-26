@@ -16,11 +16,6 @@ class TaskController extends Controller
         return view('task.index');
     }
 
-    //Retorna a view create
-    public function createTask(){
-        return view('task.create');
-    }
-
     //Retorna a view 'read.blade' e lista dados no BD.
     public function showAll(){
         $tasks = DB::table('task')->get();

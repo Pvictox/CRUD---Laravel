@@ -16,7 +16,6 @@
                     <h1>VIEW INDEX</h1>
                 </div>
                 <div class="pull-right">
-                    <!--<button type="button" onclick="window.location = '{{route('task.create')}}'" class="btn btn-primary">Create</button>-->
                     <button type="button" onclick="goToCadastro()" href="javascript:void(0)" class="btn btn-primary">Create</button>
                     <button type="button" onclick="window.location = '{{route('task.read')}}'" class="btn btn-primary">Mostrar todos</button>
                 </div>
