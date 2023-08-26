@@ -6,12 +6,13 @@
     <title>Task CRUD</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="column">
-                <div class="pull-left align-middle">
+            <div class="column" id="initial-info">
+                <div class="pull-left">
                     <h1>VIEW INDEX</h1>
                 </div>
                 <div class="pull-right">
@@ -34,7 +35,7 @@
             @endif
             @if (session()->has('success'))
                 <hr class="border border-primary border-3 opacity-75">
-                <p>{{session('success')}}</p>
+                <p id="msg-success">{{session('success')}}</p>
                 <hr class="border border-primary border-3 opacity-75">
             @endif
         </div>
