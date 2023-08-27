@@ -4,13 +4,14 @@ Como a aplicação faz uso do framework Laravel, verifique se os requisitos nece
 
 Basicamente você necessita das seguintes ferramentas:
 
-| **Tecnologia** |
+| **Recurso** |
 |:--------------:|
 |       PHP      |
 |     <a href="https://getcomposer.org">Composer</a>   |
+| XAMPP(OPCIONAL)|
 
 
-# ❗Configurando o banco de dados:
+# ❗Configurando o projeto:
 1. <span style= "color:red">**Crie um novo banco de dados**</span>: Crie um novo BD com um nome de sua escolha. A criação é necessária pois a aplicação necessita realizar a conexão com o mesmo para a seu funcionamento.
 ---
 2. <span style="color:red">**Renomeie o arquivo *'.env.example'* para *'.env'***</span>:
@@ -33,3 +34,11 @@ Basicamente você necessita das seguintes ferramentas:
    - Se tudo estiver certo, uma tabela chamada 'task' estará criada no seu BD.
 7. <span style="color:red">**Inicie o servidor usando o comando:**</span> `php artisan serve`
    - Copie o link e jogue no seu browser.
+---
+
+# Opcional: Auto-popular o banco de dados:
+
+Caso você queira gerar um conjunto de registros no BD basta você rodar o comando:
+`php artisan db:seed`
+
+**Aqui eu estou supondo que você seguiu e configurou o projeto de acordo com as instruções lá em cima.**
