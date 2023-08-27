@@ -11,10 +11,10 @@
 <body>
     <h1 id="title-inforgeneses">Editar Task</h1>
     <div>
-        @if($errors->any()) <!--Se houver algum erro ele será mostrado em uma lista --> 
+        @if($errors->any()) <!--Se houver algum erro retornado por algum controlador ele será mostrado em uma lista --> 
             <hr class="border border-danger border-2 opacity-50">
                 <p id="msg-erro">Erro ao cadastrar Task</p>
-                @foreach ($errors->all() as $erro)
+                @foreach ($errors->all() as $erro) <!-- Itera sobre cada possível erro para mostrar na página-->
                     <ul>
                         <li class="list-group-item list-group-item-danger"><p>{{$erro}}</p></li>
                     </ul>
@@ -22,7 +22,14 @@
             <hr class="border border-danger border-2 opacity-50">
         @endif
     </div>
-    <form method="post" action="{{route('task.update', ['tarefa' => $taskToEdit->id])}}" id="formEdit">  <!-- Método post visto que iremos capturar info. e a rota que irá atuar sobre essa captura (no caso o update dos dados no DB)-->
+    
+    <!-- 
+        Formulário de edição de uma task X. A 'ação' que ocorre a partir do clique no botão de 'atualizar produto'
+        é passada para o controlador das task onde a função de atualizar o produto em questão realiza suas operações.
+
+        $taskToEdit é um objeto do tipo Task que é enviado a partir do momento que o ator seleciona a task para editar.
+    -->
+    <form method="post" action="{{route('task.update', ['tarefa' => $taskToEdit->id])}}" id="formEdit">
         @csrf <!-- Token de segurança -->
         @method('put')
         <div class="mb-3">
@@ -38,6 +45,7 @@
         <input type="submit" value="Atualizar o produto" class="btn btn-success"/>
     </form>
 
+    <!-- Caso o ator clique no botão de voltar ele é redirecionado para a tela onde todos os registros são mostrados -->
     <button type="button" onclick="window.location = '{{route('task.read')}}'" class="btn btn-primary">Voltar</button>
 </body>
 </html>

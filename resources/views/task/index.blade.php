@@ -32,7 +32,7 @@
                     @endforeach
                 <hr class="border border-danger border-2 opacity-50">
             @endif
-            @if (session()->has('success'))
+            @if (session()->has('success')) <!-- Mensagens de sucesso serão mostradas caso apareçam devido alguma operação no Controller-->
                 <hr class="border border-primary border-3 opacity-75">
                 <p id="msg-success">{{session('success')}}</p>
                 <hr class="border border-primary border-3 opacity-75">
@@ -40,7 +40,8 @@
         </div>
     </div>
 
-    <!-- Modal -->
+    <!-- Modal reponsável pelo cadastro de uma taks 
+    -->
     <div class="modal fade" id="taskModal" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -49,7 +50,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form method="post" action="{{route('task.save')}}" id="formTask">
+                    <form method="post" action="{{route('task.save')}}" id="formTask"> <!--Caso o botão de submit seja selecionado a rota para a criação de task é acionada -->
                         @csrf <!-- Token de segurança -->
                         @method('post')
                         <div class="mb-3">
@@ -70,7 +71,7 @@
     </div>
 
     <script>
-        function goToCadastro(){
+        function goToCadastro(){ //Função responsável por mostrar o modal do bootstrap. 
             $('#taskModal').modal('show');
         }
     </script>
