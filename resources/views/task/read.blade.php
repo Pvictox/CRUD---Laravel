@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <h1>READ PAGE</h1>
+    <h1 id="title-inforgeneses">Registros</h1>
     <div>
         @if (session()->has('success'))
             <hr class="border border-primary border-3 opacity-75">

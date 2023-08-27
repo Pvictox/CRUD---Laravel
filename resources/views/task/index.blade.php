@@ -13,7 +13,7 @@
         <div class="row">
             <div class="column" id="initial-info">
                 <div class="pull-left">
-                    <h1>VIEW INDEX</h1>
+                    <h1 id="title-inforgeneses">Processo Seletivo Inforgeneses!</h1>
                 </div>
                 <div class="pull-right" id="div-buttons">
                     <button type="button" onclick="goToCadastro()" href="javascript:void(0)" class="btn btn-primary">Create</button>

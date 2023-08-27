@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <h1>Edit Task</h1>
+    <h1 id="title-inforgeneses">Editar Task</h1>
     <div>
         @if($errors->any()) <!--Se houver algum erro ele será mostrado em uma lista --> 
             <hr class="border border-danger border-2 opacity-50">
