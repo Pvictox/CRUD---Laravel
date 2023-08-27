@@ -13,10 +13,18 @@ body h1{
 }
 
 .container-fluid{
+    margin-top: 10rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
     padding: 2rem;
+}
+
+#div-buttons{
+    align-self: center;
+    align-items: center;
+    margin-left: 1rem;
 }
 
 #formEdit{
@@ -44,3 +52,4 @@ body h1{
 #table-op a{
     margin-right: 1rem;
 }
+

@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TaskController;
-
+use App\Models\Task;
 
 Route::get('/', function () {
     return view('welcome');
@@ -23,5 +23,3 @@ Route::put('/task/{tarefa}/update', [TaskController::class, 'updateTask'])->name
 
 Route::delete('/task/{tarefa}/delete', [TaskController::class, 'deleteTask'])->name('task.delete');
 
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
