@@ -1,3 +1,5 @@
+# ❗Importante: como rodar a aplicação -> <a href="./docs/start.md">AQUI</a> 
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
@@ -16,7 +18,7 @@ Esta aplicação é um CRUD simples utilizando o framework Laravel. As seguintes
 |     Laravel    |
 |      Blade     |
 
-## Diagrama de como a aplicação está estruturada
+## Diagrama de como a aplicação está estruturada:
 
 <p align="center">
     <img src="./resources/assets/diagrama_inforgeneses.png" alt="diagrama">
